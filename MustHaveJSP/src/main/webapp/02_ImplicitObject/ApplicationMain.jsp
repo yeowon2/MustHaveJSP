@@ -7,15 +7,15 @@
     초기화 매개변수 : <%= application.getInitParameter("INIT_PARAM") %>
 
     <h2>서버의 물리적 경로 얻어오기</h2>
-    application 내장 객체 : <%= application.getRealPath("/2_ImplicitObject") %>
+    application 내장 객체 : <%= application.getRealPath("/02_ImplicitObject") %>
 
     <h2>선언부에서 application 내장 객체 사용하기</h2>
     <%!
     public String useImplicitObject() {
-        return this.getServletContext().getRealPath("/2_ImplicitObject");
+        return this.getServletContext().getRealPath("/02_ImplicitObject");
     }
     public String useImplicitObject(ServletContext app) {
-        return app.getRealPath("/2_ImplicitObject");
+        return app.getRealPath("/02_ImplicitObject");
     }
     %>
     <ul>
